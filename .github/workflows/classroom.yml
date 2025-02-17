@@ -1,0 +1,36 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Test Case 1 [Dave, 12345, abc123]
+      id: test-case-1-dave-12345-abc123
+      uses: classroom-resources/autograding-io-grader@v1
+      with:
+        test-name: Test Case 1 [Dave, 12345, abc123]
+        setup-command: ''
+        command: python3 cyber_suite_new_user
+        input: |-
+          Dave
+          12345
+          abc123
+        expected-output: "Please enter your name: Please enter your user id: Please
+          enter your password: \nWelcome, Dave. Your ID is 12345.\n\nPASSWORD: \nXXXXXX"
+        comparison-method: exact
+        timeout: 10
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST-CASE-1-DAVE-12345-ABC123_RESULTS: "${{steps.test-case-1-dave-12345-abc123.outputs.result}}"
+      with:
+        runners: test-case-1-dave-12345-abc123
