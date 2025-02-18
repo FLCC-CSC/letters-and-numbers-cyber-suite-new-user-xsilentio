@@ -25,7 +25,7 @@
 name = input("Please enter your name: ")
 id = int(input("Please enter your user id: "))
 password = input("Please enter your password: ")
-print(f"\nWelcome, {name}. Your ID is", id)
+print(f"\nWelcome, {name}. Your ID is {id}.")
 print("\nPASSWORD: \n" + "X"*len(password))
 
 ########### END YER CODE ABOVE THIS LINE ###########
