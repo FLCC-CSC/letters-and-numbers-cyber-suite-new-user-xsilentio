@@ -1,8 +1,8 @@
 # FILE NAME: cyber_suite_new_user.py
 
-# NAME: 
-# DATE: 
-# BRIEF DESCRIPTION:  
+# NAME: Katrina Carpenter
+# DATE: 02/14/2025
+# BRIEF DESCRIPTION: Cybersuite New User Lab
 
 
 
@@ -22,14 +22,11 @@
 
 ########## ENTER YER CODE BELOW THIS LINE ##########
 
-
-
-
-
-
-
-
-
+name = input("Please enter your name: ")
+id = int(input("Please enter your user id: "))
+password = input("Please enter your password: ")
+print(f"Welcome, {name}. Your ID is", id)
+print("\nPASSWORD:\n" + "X"*len(password))
 
 ########### END YER CODE ABOVE THIS LINE ###########
     
@@ -80,8 +77,9 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 '''
 1. This project has a bit of a speed bump (converting the password to XXXXs). What was your thought process?
 
-
+Right away I thought of the len() function, and how the * operator works on strings.
 
 
 
 '''
+
