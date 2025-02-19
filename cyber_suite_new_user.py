@@ -1,5 +1,5 @@
 # FILE NAME: cyber_suite_new_user.py
-
+# DRG - Rerun for points 2025-02-18-2348
 # NAME: Katrina Carpenter
 # DATE: 02/14/2025
 # BRIEF DESCRIPTION: Cybersuite New User Lab
